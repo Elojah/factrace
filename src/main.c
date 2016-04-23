@@ -6,7 +6,7 @@
 /*   By: hdezier <hdezier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/23 14:44:51 by hdezier           #+#    #+#             */
-/*   Updated: 2016/04/23 19:16:44 by hdezier          ###   ########.fr       */
+/*   Updated: 2016/04/23 19:18:50 by hdezier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ int				main(int ac, char **av)
 	(void)av;
 	list_mpz = NULL;
 	read_input(&list_mpz);
-	print_list(list_mpz);
+	find_prime(list_mpz);
 	return (0);
 }
