@@ -6,7 +6,7 @@
 /*   By: hdezier <hdezier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/23 14:45:12 by hdezier           #+#    #+#             */
-/*   Updated: 2016/04/23 19:08:15 by flagoutt         ###   ########.fr       */
+/*   Updated: 2016/04/23 19:17:02 by hdezier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 # define FACTRACE
 
 # include "../lib/gmp/include/gmp.h"
+
 # include <string.h>
+# include <stdio.h>
 
 typedef struct		s_list
 {
@@ -22,7 +24,10 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
-typedef void (*bignum_callback)(mpz_t *);
-void find_prime(t_list *lst);
+typedef void (*bignum_callback)(t_list **, mpz_t *);
+
+void				read_input(t_list **list);
+void				print_list(t_list *list);
+void				find_prime(t_list *lst);
 
 #endif
