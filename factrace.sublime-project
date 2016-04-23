@@ -1,0 +1,22 @@
+{
+    "folders":
+    [
+        {
+            "path": "~/code/rendu/factWIP"
+        }
+    ],
+
+    "settings":
+    {
+        "cc_include_options":
+        [
+            "-D_DBG_",
+            "-I${project_path}/include",
+            "-I${project_path}/lib/gmp/include",
+             "-Wall",
+             "-Werror",
+             "-Wextra",
+             "-v"
+        ]
+    }
+}
