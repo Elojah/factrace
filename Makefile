@@ -6,7 +6,7 @@
 #    By: hdezier <hdezier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 13:12:27 by hdezier           #+#    #+#              #
-#    Updated: 2016/04/23 17:25:54 by hdezier          ###   ########.fr        #
+#    Updated: 2016/04/23 18:34:12 by hdezier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 TARGET = factrace
@@ -25,6 +25,7 @@ RM = rm -rf
 
 #List classes here
 CLASS = main\
+		read_input\
 
 #List interfaces here
 INTERFACE = \
