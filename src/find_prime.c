@@ -1,3 +1,5 @@
+#include "factrace.h"
+
 void find_prime(t_list *lst)
 {
 	t_list		*tmp;
