@@ -6,13 +6,13 @@
 #    By: hdezier <hdezier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/04/06 13:12:27 by hdezier           #+#    #+#              #
-#    Updated: 2016/04/23 19:17:55 by hdezier          ###   ########.fr        #
+#    Updated: 2016/04/23 19:44:28 by hdezier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 TARGET = factrace
 
 #Directories
-BIN_DIR = bin
+BIN_DIR =
 SRC_DIR = src
 INC_DIR = include
 BUILD_DIR = build
@@ -58,28 +58,24 @@ INC += $(addprefix -I,$(INC_DIR))
 INC += $(addsuffix /include, $(addprefix -I, $(LIB_LOCAL)))
 
 #RULES
-all : dirbin $(BIN_DIR)/$(TARGET)
+all : $(TARGET)
 
 clean :
 	$(RM) $(BUILD_DIR)
 
 fclean :
-	$(RM) $(BUILD_DIR) $(TARGET) $(BIN_DIR)
+	$(RM) $(BUILD_DIR) $(TARGET)
 
 re : fclean all
-
-dirbin:
-	mkdir -p $(BIN_DIR)
 
 .PHONY: all clean fclean re
 
 .SILENT: dirlib dirbuild dirbin
 
 #Build rule
-$(BIN_DIR)/$(TARGET) : $(OBJ)
+$(TARGET) : $(OBJ)
 	@echo "\n\033[1;4;34mLINK:\033[0m\n"$^"\n\033[36mLinking objects ...\033[0m\n"
 	$(CC) $(CFLAGS) $^ -o $@ $(LIBS)
-	@ln -sf $(BIN_DIR)/$(TARGET) $(TARGET)
 
 #Compilation rule
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%$(SRC_EXT)
